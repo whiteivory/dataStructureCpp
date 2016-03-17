@@ -1,0 +1,6 @@
+all : test.o 
+	g++ -ggdb3 -o all test.o
+test.o: test.cpp listnode.h list.h list_constructor.h list_readonly.h list_writable.h list_other.h
+	g++ -ggdb3 -c test.cpp 2>error
+clear: 
+	rm -f test.o all
